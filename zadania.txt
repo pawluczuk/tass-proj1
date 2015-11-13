@@ -1,0 +1,19 @@
+Zainstaluj Pajeka i pythona, wraz z pakietem NetworkX. 
++Wczytaj pobrany graf. 
++Usuń ewentualne zduplikowane krawędzie; możesz to uwzględnić w wadze krawędzi pozostawionej. 
++Jeśli chcesz, przekształć graf na nieskierowany. 
+
+Wyznacz składowe spójne (NetworkX + Pajek)
+Jenna spójna składowa, zawierająca w sobie wszystkie 40 wierzchołków.
+>>> [len(c) for c in sorted(nx.connected_components(G), key=len, reverse=True)]
+[40]
+
+Ile ich jest; jaki jest rząd i rozmiar największej z nich? 
+Następnie dokonaj szczegółowej analizy największej składowej spójnej.
+ 
+Dla grafów małych:
+-  wykreśl graf (Pajek)
+-  znajdź 5 wierzchołków o największej wartości: bliskości, pośrednictwa i rangi
+-  znajdź wszystkie największe kliki (ile i jakiego rzędu?)
+-  przeprowadź grupowanie aglomeracyjne: UPGMA
+Wykreśl dendrogram lub jego istotny fragment i zaproponuj arbitralny podział grafu.
